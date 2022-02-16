@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+    android:layout_height="match_parent"
+    app:backgroundTint="@color/colorWhite"
+    >
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/close_still_floatAButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:clickable="false"
+        android:focusable="true"
+        android:scaleType="center"
+        app:backgroundTint="@color/colorWhite"
+        app:srcCompat="@drawable/ic_dialog_close_light" />
+
+    <com.skyfishjy.library.RippleBackground
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:id="@+id/ripple_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rb_color="#0099CC"
+        app:rb_radius="40dp"
+        app:rb_rippleAmount="4"
+        app:rb_duration="3000"
+        app:rb_scale="6">
+
+    <Button
+        android:id="@+id/still_there_button"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="@string/still_there"
+        android:layout_centerInParent="true"
+        android:textSize="25sp"
+        android:textColor="@color/colorWhite"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        android:background="@drawable/cercle_still_there"
+        tools:layout_editor_absoluteY="0dp"
+        android:paddingHorizontal="25dp"
+        />
+
+    </com.skyfishjy.library.RippleBackground>
+
+</RelativeLayout>

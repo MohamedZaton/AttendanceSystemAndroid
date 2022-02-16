@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="10dp"
+    android:layout_gravity="center">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardPreventCornerOverlap="true"
+            android:layout_margin="8dp"
+            app:cardElevation="30dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                    >
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/close_list_excuse_floatAButton"
+                            android:layout_width="48dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="top|right"
+                            android:clickable="false"
+                            android:focusable="true"
+                            app:backgroundTint="@color/colorWhite"
+                            android:scaleType="center"
+                            app:fabCustomSize="40dp"
+                            app:srcCompat="@drawable/ic_dialog_close_light_small" />
+                        <ProgressBar
+                            android:id="@+id/loading_list_progressBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="8"
+                            android:visibility="gone" />
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/exuse_menu_list_recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="10"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginVertical="25dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3">
+
+                                <Button
+                                    android:id="@+id/select_excuseList_button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:textColor="@color/colorWhite"
+                                    android:background="@drawable/btn_rounded"
+                                    android:text="ok" />
+                        </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+
+
+        </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pclink.attendance.system">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature android:name="android.hardware.camera2.full" />
+
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/work_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/work_logo"
+        android:screenOrientation="portrait"
+        android:showOnLockScreen="true"
+        android:showWhenLocked="true"
+        android:supportsRtl="false"
+        tools:replace="android:supportsRtl,android:allowBackup"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:versionCode="1"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name=".FilesAttachmentUploading.VideoUploadingActivity"></activity>
+        <activity android:name=".FilesAttachmentUploading.DocumentUploadingActivity" />
+        <activity android:name=".FilesAttachmentUploading.ImagesUploadingActivity" />
+        <activity android:name=".FilesAttachmentUploading.FilesReportActivity" />
+        <activity android:name=".Report.GoogleFormActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name=".Chat.utils.MediaPlayerActivity" />
+        <activity android:name=".Chat.utils.PhotoViewerActivity" />
+        <activity android:name=".Chat.MessageListActivity" />
+
+        <uses-library android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".Report.ReportFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.SignIn"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Camera.CameraApi"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" /> <!-- smart scheduler services and receiver -->
+        <service
+            android:name="io.hypertrack.smart_scheduler.SmartSchedulerAlarmReceiverService"
+            android:exported="false"
+            android:stopWithTask="false" />
+        <service
+            android:name="io.hypertrack.smart_scheduler.SmartSchedulerPeriodicTaskService"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Alarm.StillJobService"
+            android:label="Still service"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver android:name="io.hypertrack.smart_scheduler.SmartSchedulerAlarmReceiver">
+            <intent-filter>
+                <action android:name="android.media.action.DISPLAY_NOTIFICATION" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".Notification.NotificationAlarmReceiver"
+            android:showOnLockScreen="true"
+            android:showWhenLocked="true">
+            <intent-filter>
+                <action android:name="android.media.action.DISPLAY_NOTIFICATION" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.test.intent.action.ALARM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".NetworkServer.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Alarm.StillServiceReceiver">
+            <intent-filter>
+                <action android:name="com.test.intent.action.ALARM" />
+                <action android:name="android.media.action.DISPLAY_NOTIFICATION" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".LocationFind.GpsReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.test.intent.action.ALARM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Activities.OfflineUploadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name=".InfoApp.About" />
+        <activity android:name=".InfoApp.HelpInfo" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="5fa7a52d99625c93a09f5b3601927b28f48b5f3f" />
+    </application>
+
+</manifest>

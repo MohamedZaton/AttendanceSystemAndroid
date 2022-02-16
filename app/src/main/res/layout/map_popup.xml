@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="5dp"
+    android:layout_gravity="center">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="12dp"
+        app:cardPreventCornerOverlap="true"
+        android:background="@drawable/card_shape">
+
+    <fragment
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map_p"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity"
+        android:scaleType="fitCenter"
+        class="com.google.android.gms.maps.SupportMapFragment"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/close_map_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="center"
+            app:backgroundTint="@color/colorWhite"
+            app:srcCompat="@drawable/ic_dialog_close_light" />
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

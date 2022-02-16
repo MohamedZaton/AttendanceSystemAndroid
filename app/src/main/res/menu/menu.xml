@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item-->
+        <!--android:title=""-->
+        <!--android:icon="@mipmap/title"-->
+        <!--app:showAsAction="always"-->
+        <!--&gt;-->
+
+    <!--</item>-->
+    <item
+        android:id="@+id/offline_txt_item"
+        android:title=""
+        app:showAsAction="always"
+
+        android:fitsSystemWindows="true"
+        android:icon="@drawable/no_wifi"
+        android:layout_gravity="center">
+    </item>
+
+    <item
+        android:id="@+id/gps_actionbar_item"
+        android:icon="@drawable/ic_location_on_black_24dp"
+        android:title=""
+        app:showAsAction="always">
+
+
+    </item>
+</menu>

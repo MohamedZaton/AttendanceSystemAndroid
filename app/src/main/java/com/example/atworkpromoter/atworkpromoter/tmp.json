@@ -1,0 +1,50 @@
+{
+  "agencyID": 777,
+  "date": "2019-03-03T00:00:00",
+  "rosterType": 1,
+  "checkinTime": "2018-03-03T17:50:00",
+  "checkoutTime": "2018-03-03T22:50:00",
+  "rosterActivities":
+  [
+    {
+      "activityID": "1e57a2e2-3e51-463d-9d05-ff3e5a763118",
+      "customerId": 1,
+      "customerName": "Customer",
+      "latitude": "31.2126853",
+      "longitude": "29.9394745",
+      "description": "test",
+      "tasks": [
+        {
+          "taskID": 4,
+          "cid": 1,
+          "taskName": "Task"
+        },
+        {
+          "taskID": 5,
+          "cid": 1,
+          "taskName": "Task2"
+        }
+      ]
+    },
+    {
+      "activityID": "111f2e78-caf5-42c9-80fe-efe26891a36d",
+      "customerId": 2,
+      "customerName": "Customer2",
+      "latitude": "31.2126853",
+      "longitude": "29.9394745",
+      "description": "test",
+      "tasks": [
+        {
+          "taskID": 4,
+          "cid": 1,
+          "taskName": "Task"
+        },
+        {
+          "taskID": 5,
+          "cid": 1,
+          "taskName": "Task2"
+        }
+      ]
+    }
+  ]
+}

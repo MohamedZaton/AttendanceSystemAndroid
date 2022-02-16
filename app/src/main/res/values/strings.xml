@@ -1,0 +1,137 @@
+<resources>
+    <string name="app_name">EAT</string>
+    <string name="about_name">About EAT</string>
+    <string name="app_name2">EAT</string>
+    <string name="password">Password</string>
+    <string name="username">username</string>
+    <string name="SignIn">Sign In</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_home_check">Check In </string>
+    <string name="nav_Request">Request</string>
+    <string name="nav_break">Break</string>
+    <string name="break_in">Break In</string>
+    <string name="nav_attendance">Attendance</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="log_out">Log Out</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="check_out">Check out</string>
+    <string name="check_in">CHECK IN</string>
+    <string name="connect_message">No network please check your  internet connection and try again </string>
+    <string name="connect_title">No Network</string>
+    <string name="connect_btn_dialog">ok</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="url_server">https://api.myjson.com/bins/tbhh8</string>
+    <string name="todo">TODO</string>
+    <string name="vacation_request">Vacation Request</string>
+    <string name="Start_from">Start from :</string>
+    <string name="End_to">End  :</string>
+    <string name="for_total_of">For a total  of</string>
+    <string name="day_word">Days</string>
+    <string name="clear_btn">Clear</string>
+    <string name="submit">SUBMIT</string>
+    <string name="excuse_request">Excuse Request</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_log">Log</string>
+    <string name="nav_request">Request</string>
+    <string name="userId">ID</string>
+    <string name="break_out">BREAK OUT</string>
+    <string name="still_there">Still There</string>
+    <string name="location_title">Location</string>
+    <string name="locationEnable_message">You must enable Location</string>
+    <string name="locationEnable_btn_dialog">Enable</string>
+    <string name="default_list_selected">Select Reason</string>
+    <!--
+    <string name="default_list_selected">Select Reason</string>
+-->
+    <string name="date_format">dd/mm/yyyy</string>
+    <string name="write_reason">Write your reason</string>
+    <string name="error_date">Select your date , please</string>
+    <string name="error_empty_reason">Write Your Reason , please</string>
+    <string name="error_select_list_type">Select your type , please</string>
+    <string name="back_btn">Back</string>
+    <string name="upload_success"> </string>
+    <string name="upload_failed">Failed sent request</string>
+    <string name="main_upload_title">Uploading Yesterday</string>
+    <string name="upload_title">You can upload yesterday action from here</string>
+    <string name="cik_conect_network">No internet  connection</string>
+    <string name="log_out_msg">You must check out first </string>
+    <string name="about_content"><![CDATA[Android Application is developed by EAT program.It enhances monitoring the real time attendance of the sales force in assigned stores in an accurate & professional way.Management is having on time notification with real time attendance location & time.]]></string>
+    <string name="one_question"> 1.\tWho are users of the application?</string>
+    <string name="one_answer"><![CDATA[\n 1.1\tSales Force: On ground sales force are the main users for the interface of the application from the allocated store. They will use the application to register their actual attendance time & Location ( check in, check out, break in & break out ) on the back end system]]></string>
+    <string name="two_question"> 2.\tHow to use the application?</string>
+    <string name="two_answer"><![CDATA[\n 2.1\tOpen the application .  \n 2. Press check in button when you are in store If you will start the break, Press break in button. .  \n 2.3 Upon finishing the break Press break out After finishing your shift, Press check out button .  \n 2.4\tYou can review your history for check in & check out through view log button .  \n 2.5 Minium Android Version is : lollipop 5.1.1 , and Minimum Storage is 250 MB ]]></string>
+    <string name="three_question"> 3.\tHow to use the side menu</string>
+    <string name="three_answer">\n 3.1\tAttendance Tab: this part will shift you to the first page of check in .  \n 3.2\tAbout : Brief about the application .  \n 3.3\tHelp : Application Manual . .  \n 3.4\tLog out: To log out of the application .  \n 3.5\tView log : The sales person can view the history of his log .</string>
+    <string name="four_question">4.\tFAQ for application</string>
+    <string name="four_answer"><![CDATA[\n 4.1\tIF I close the application or mobile is out of charge ? Take a photo and your next required action will be highlighted. \n 4.2\tSignal is weak in store? Press check in button & actual time will be registered on the back end system when network improved.  \n 4.3 I can’t find my ID & store location?Contact your administration .  \n 4.4\tI forgot to press check in? You won’t be able to to press check out & inform your supervisor  \n 4.5\tI can’t view my log history ? Contact your administrator]]></string>
+    <string name="exit_ask_app">Do you want to exit app ?</string>
+    <string name="error_start_date">Start Date must be less than End date</string>
+    <string name="title_report">Sales Report</string>
+    <string name="total_amount_sold">Total Sold</string>
+    <string name="number_buyer">Number Of Buyers</string>
+    <string name="Comment_txt">Comment</string>
+    <string name="next">Next</string>
+    <string name="traffic_txt">Store Traffic</string>
+    <string name="title_my_product">Products</string>
+    <string name="add_product">Add Product</string>
+    <string name="no_item">No items</string>
+    <string name="Model_number">Model Number</string>
+    <string name="Number_items">Number of items</string>
+    <string name="unit_price">Unit Price</string>
+    <string name="title_my_comp">Competitive</string>
+    <string name="add_competitive">Add Competitive Product</string>
+    <string name="super_visor">Supervisor  Info</string>
+    <string name="phone_number">Phone :</string>
+    <string name="email_address">Email :</string>
+    <string name="s_name">Name :</string>
+    <string name="super_title">Supervisor Information</string>
+    <string name="number_of_shopper">Number Of Shoppers</string>
+    <string name="no_network_msg">Check your network connection .</string>
+    <string name="server_down_msg">Error get Your Sales Form.
+        Please try again later,contact  support if the error persists.</string>
+
+    <!--send bird-->
+    <!-- Open Channel List -->
+    <string name="open_channel_list_participant_count">%1$d participants</string>
+    <string name="create_open_channel">Create Open Channel</string>
+    <string name="participant_list">Participants</string>
+    <!-- Group Channel List -->
+    <string name="group_channel_list_file_message_text">%1$s has uploaded a file.</string>
+    <string name="create_group_channel">Create Group Channel</string>
+    <string name="member_list">Members</string>
+    <string name="invite_member">Invite members</string>
+    <string name="member_info"></string>
+    <!-- Content descriptions -->
+    <string name="open_channel_chat_content_desc_profile">Profile image</string>
+    <!-- Menu actions -->
+    <string name="action_create_channel">Create channel</string>
+    <string name="download">Download</string>
+    <string name="cancel">Cancel</string>
+    <string name="upload">Upload</string>
+    <string name="resend_message">Resend</string>
+    <string name="delete_message">Delete</string>
+    <!-- Message Status -->
+    <string name="message_sending">Sending</string>
+    <string name="message_failed">Failed</string>
+    <string name="try_again">Try Again  </string>
+    <string name="form_late">Check out and fill form later</string>
+    <string name="or_generate">OR</string>
+    <string name="continue_txt">Continue</string>
+    <string name="no_connect">OFFLine</string>
+    <string name="sync_title">Sync Data</string>
+    <string name="sync_info_offline">You need to upload offline activities</string>
+    <string name="version_name">Version 2.0</string>
+    <string name="notes">Notes</string>
+    <string name="attachment_file">Attachment Files</string>
+    <string name="select_file">Select</string>
+    <string name="select_image">Select Image</string>
+    <string name="select_video">Select Video</string>
+    <string name="select_pdf">Select PDF</string>
+    <string name="upload_imge">Upload Image</string>
+    <string name="select_txt">Select</string>
+    <string name="fake_message">We have detected that your using a fake location app.\n please stop the app and try again</string>
+</resources>

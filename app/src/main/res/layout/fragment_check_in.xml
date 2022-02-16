@@ -1,0 +1,222 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.pclink.attendance.system.TabCheck.CheckInFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/profile_image_imageview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/pf" />
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name_account_user_txtvw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Bobo"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    />
+
+                <TextView
+                    android:id="@+id/current_time_user_txtvw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="arrived at 9:03"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    />
+              <TextView
+                  android:id="@+id/store_name"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text=""
+                  />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                    android:id="@+id/circular_progress"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:direction="clockwise"
+                    app:dotColor="@color/colorAccent"
+                    app:dotWidth="12dp"
+                    app:drawDot="true"
+                    app:enableProgressAnimation="true"
+                    app:progressBackgroundStrokeWidth="9dp"
+                    app:progressColor="@color/progressCircleColor"
+                    app:progressStrokeWidth="9dp"
+                    app:textColor="@color/colorWhite"
+
+                    />
+
+                <Chronometer
+                    android:id="@+id/chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorAccent"
+                    android:background="@color/colorWhite"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    >
+
+
+                </Chronometer>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/chat_floatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@android:drawable/stat_notify_chat"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="20dp"
+                    />
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/upload_file_floating_ac_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@android:drawable/ic_menu_upload"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="20dp"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:visibility="gone"
+
+            android:id="@+id/wait_loading_rlyt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <ProgressBar
+
+                style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:indeterminate="true" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/checks_buttons_rlyt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="2">
+            <Button
+                android:id="@+id/check_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/btn_rounded"
+                android:text="@string/check_in"
+                android:textStyle="bold"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="100dp"
+                android:layout_marginBottom="10dp"
+
+                />
+
+            <!-- disappear  button  gone -->
+            <Button
+                android:id="@+id/check_out_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_red_fire"
+                android:paddingHorizontal="100dp"
+                android:paddingVertical="10dp"
+                android:text="@string/check_out"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</FrameLayout>

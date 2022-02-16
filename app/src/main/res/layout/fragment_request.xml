@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/request_continer_fragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pclink.attendance.system.TabRequest.RequestFragment">
+
+    <LinearLayout
+        android:id="@+id/request_continerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="44dp"
+            android:gravity="center"
+            android:text="Select Request Type"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/vacation_requestm_button"
+            android:layout_marginTop="24dp"
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape_shadow_white"
+            android:textColor="@color/darkgray"
+            android:paddingVertical="30dp"
+            android:text="Vacations"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/excuse_requestm_button"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/darkgray"
+            android:layout_width="214dp"
+            android:paddingVertical="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape_shadow_white"
+            android:text="Excuses"
+            android:textAllCaps="false"
+            />
+    </LinearLayout>
+</FrameLayout>

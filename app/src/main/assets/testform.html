@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript View</title>
+
+    <script type="text/javascript">
+
+        function reportSubmit(){
+            var message = document.getElementById("message").value;
+            var lengthLong = document.getElementById("length").checked;
+
+             if (message== "")
+             {
+                 android.reportSales(false);
+             }else
+             {
+                 android.reportSales(true);
+             }
+            return false;
+        }
+
+        window.onload = function(){
+            var form = document.getElementById("form");
+            form.onsubmit=reportSubmit;
+        }
+    </script>
+</head>
+
+<body>
+
+<form id="form">
+    product item : <input id="message" name="message" type="text"/><br />
+    checkbox kok: <input id="length" name="length" type="checkbox"/><br />
+    <input type="submit" value="Make Toast"/>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "217148638873",
+    "project_id": "attendance-system-8c349",
+    "storage_bucket": "attendance-system-8c349.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217148638873:android:936c2ecc4c835f967f9a08",
+        "android_client_info": {
+          "package_name": "com.pclink.attendance.system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217148638873-jluf120krjegla2u4ku62j7i5v9p5jff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqm3lgw6EcHAKajS0FtZc3fY9Fv7qCsOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217148638873-jluf120krjegla2u4ku62j7i5v9p5jff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

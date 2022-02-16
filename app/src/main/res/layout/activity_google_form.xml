@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:imeOptions="actionGo"
+    tools:context=".Report.GoogleFormActivity">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+      <android.support.v7.widget.RecyclerView
+          android:visibility="gone"
+          android:id="@+id/recyclerView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+      </android.support.v7.widget.RecyclerView>
+      <LinearLayout
+          android:id="@+id/form_loading_lnlyt"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="8"
+          android:focusable="false"
+          android:orientation="vertical">
+          <ScrollView
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:scrollbars="vertical"    >
+              <WebView android:id="@+id/web_view"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:scrollbars="horizontal"
+
+                  />
+          </ScrollView>
+
+      </LinearLayout>
+      <LinearLayout
+          android:id="@+id/loading_network_linearlyt"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:layout_gravity="center"
+          android:orientation="vertical"
+          android:layout_weight="2">
+          <TextView
+              android:id="@+id/loading_title_txt"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Sales Form"
+              android:textSize="20dp"
+              android:textStyle="bold"
+              android:textColor="@color/colorPrimary"
+              />
+
+
+          <TextView
+              android:id="@+id/loading_prnt_txt"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="10dp"
+              android:textStyle="bold"
+              android:text="0%"
+                android:layout_gravity="center"
+              android:gravity="center"
+              />
+          <ImageView
+              android:id="@+id/generate_img"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:src="@drawable/ic_generate_form_main"
+              android:layout_margin="7dp"
+              />
+          <ProgressBar
+              android:id="@+id/loading_form_progressbar"
+              style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="20dp"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:indeterminate="false"
+
+              />
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginHorizontal="30dp"
+              android:orientation="vertical"
+
+              >
+              <Button
+                  android:id="@+id/try_btn"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:text="@string/try_again"
+                  android:textColor="@color/colorWhite"
+                  android:padding="2dp"
+                  android:background="@drawable/btn_rounded"/>
+
+              <Button
+                  android:id="@+id/continue_btn"
+                  android:visibility="gone"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:text="@string/continue_txt"
+                  android:textColor="@color/colorWhite"
+                  android:padding="2dp"
+                  android:background="@drawable/btn_rounded"/>
+              <TextView
+                  android:id="@+id/or_txt"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/or_generate"
+                  android:textSize="20dp"
+                  android:textStyle="bold"
+                  android:textColor="@color/book_loading_book"
+                  android:layout_margin="5dp"
+                  android:layout_gravity="center"
+                  />
+              <Button
+                  android:id="@+id/check_out_later_form"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:text="@string/form_late"
+                  android:textColor="@color/colorWhite"
+                  android:padding="2dp"
+                  android:layout_margin="7dp"
+
+                  android:background="@drawable/btn_red_fire"/>
+
+
+
+          </LinearLayout>
+
+
+      </LinearLayout>
+
+  </LinearLayout>
+</android.support.constraint.ConstraintLayout>

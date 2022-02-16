@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorPrimary">#000026</color>
+    <color name="greenCercleBackground">#698491</color>
+    <color name="progressCircleColor">#304FFE</color>
+    <color name="colorPrimaryDark">#125688</color>
+    <color name="darkgray">#6c6c6c</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorAccent">#000026</color>
+    <color name="red_button">#d33a3d</color>
+    <color name="whiteGray">#D0D0D0</color>
+    <color name="button_select_list_reason">#5f6fc3</color>
+    <!-- Primary color of the app (shown in the app bar) -->
+    <color name="primary_color">#FFFFFF</color>
+    <!-- Primary dark color of the app (shown in the status bar) -->
+    <color name="primary_dark_color">#2F1D1A</color>
+    <!-- Background color for app -->
+    <color name="tan_background">#FFFFFF</color>
+    <!-- Background color for the numbers category -->
+    <color name="category_numbers">#FD8E09</color>
+    <color name="orange_700">#F57C00</color>
+    <color name="color_async">#F89D34</color>
+    <color name="cloud_white">@android:color/white</color>
+
+    <!-- Background color for the family members category -->
+    <color name="category_family">#379237</color>
+
+    <!-- Background color for the colors category -->
+    <color name="category_colors">#8800A0</color>
+
+    <!-- Background color for the phrases category -->
+    <color name="category_phrases">#16AFCA</color>
+
+
+    <color name="tab_background_selected">#000026 </color>
+    <color name="tab_background_unselected">#e4dd06</color>
+
+    <color name="color_arc">#c4c4c4</color>
+    <color name="color_texta">@android:color/white</color>
+    <color name="color_progress">#58D4DE</color>
+
+    <color name="arc_color_track">#c4c4c4</color>
+    <color name="colorStillThere">#00ADEF</color>
+    <color name="success_Green">#428F47</color>
+    <color name="startblue">#3F51B5</color>
+    <color name="endblue">#1A237E</color>
+    <color name="graylight">#fafafa</color>
+
+    <!-- Group Chat -->
+    <color name="groupChatBubbleMe">#774df2</color>
+    <color name="groupChatTextMe">#ffffff</color>
+    <color name="groupChatBubbleOther">#eef1f6</color>
+    <color name="groupChatTextOther">#000000</color>
+
+    <color name="groupChatReadReceiptMe">#1fcc94</color>
+    <color name="groupChatReadReceiptOther">#00BCD4</color>
+
+    <color name="groupChatAdminBackground">#e0fcff</color>
+    <color name="groupChatAdminText">#39474e</color>
+
+    <color name="groupChatDateText">#ffffff</color>
+    <color name="groupChatDateBackground">#C0C0C0</color>
+    <!-- Open Chat -->
+    <color name="openChatText">#47505d</color>
+    <color name="openChatNicknameOther">#3a414d</color>
+    <color name="openChatNicknameMe">#00BCD4</color>
+
+
+
+    <!-- Send bird Group Channel List -->
+    <color name="groupChannelUnreadCountBackground">#7d62df</color>
+    <color name="groupChannelUnreadCountText">#ffffff</color>
+
+    <!-- Selector -->
+    <color name="btn_create">#ffffff</color>
+    <color name="btn_create_disabled">#c1acff</color>
+    <color name="btn_edit">#ffffff</color>
+    <color name="btn_edit_disabled">#c1acff</color>
+    <color name="btn_send">#774df2</color>
+    <color name="btn_send_disabled">#8e8e8e</color>
+
+
+
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="160dp"
+    android:background="@color/colorWhite"
+
+    >
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/image_pf_drawer_header_imageView"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+
+        android:src="@drawable/pf"
+        android:layout_width="75dp"
+        android:layout_height="75dp" />
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+                android:id="@+id/name_account_user_drawer_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/navigationBarColor"
+            android:text="Bobo"
+
+            />
+        <TextView
+            android:id="@+id/arrived_time_cheakin_header_drawer_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="arrived at 9:03"
+            android:textColor="@color/darkgray"
+            android:layout_marginTop="5dp"
+            />
+       <!-- <TextView
+            android:id="@+id/location_drawer_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Store G"
+            android:textColor="@color/darkgray"
+            android:layout_marginTop="5dp"
+            />
+-->
+    </LinearLayout>
+
+</LinearLayout>
+
