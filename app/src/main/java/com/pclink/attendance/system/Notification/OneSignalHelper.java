@@ -37,7 +37,7 @@ import java.util.Scanner;
 public  class OneSignalHelper {
   public    static   OneSignalNotifiModel oneSignalNotifiModel ;
 
- public  static  String oneSignal_id_to_super ="75421a92-f1d1-4a26-a169-44adb5c69b1d";
+ public  static  String oneSignal_id_to_super ="b7677aac-b8f1-4eae-806e-edf860b250c4";
  public static Context mContext ;
 
     public OneSignalHelper(Context context) {
@@ -83,7 +83,7 @@ public  class OneSignalHelper {
             con.setRequestMethod("POST");
 
             String strJsonBody = "{"
-                    +   "\"app_id\": \"75421a92-f1d1-4a26-a169-44adb5c69b1d\","
+                    +   "\"app_id\": \"b7677aac-b8f1-4eae-806e-edf860b250c4\","
                     +   "\"filters\": [{\"field\": \"tag\", \"key\": \"ID\", \"relation\": \"=\", \"value\": \"243\"}],"
                     +   "\"data\": {\"foo\": \"bar\"},"
                     +   "\"contents\": {\"en\": \"English Message\"}"
@@ -121,7 +121,7 @@ public  class OneSignalHelper {
 
 private static void postNotif(String url, final JSONObject body) {
 
-    OneSignal.idsAvailable(new OneSignal.IdsAvailableHandler() {
+ /*   OneSignal.idsAvailable(new OneSignal.IdsAvailableHandler() {
         @Override
         public void idsAvailable(String userId, String registrationId) {
             Log.d("debug", "UserId:" + userId);
@@ -148,7 +148,7 @@ private static void postNotif(String url, final JSONObject body) {
         }
     });
 
-
+*/
 
 
 }

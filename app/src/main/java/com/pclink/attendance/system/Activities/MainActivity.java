@@ -299,6 +299,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
    //-------------------------------------------------------------super
     LinearLayout superAllLyt,superDataLyt;
     ProgressBar superLoadingPrgBar;
+    private static final String ONESIGNAL_APP_ID ="b7677aac-b8f1-4eae-806e-edf860b250c4";
+
 
 
 
@@ -434,10 +436,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
         // OneSignal Initialization
-        OneSignal.startInit(this)
-                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
-                .unsubscribeWhenNotificationsAreDisabled(true)
-                .init();
+        // Enable verbose OneSignal logging to debug issues if needed.
+        OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
+
+        // OneSignal Initialization
+        OneSignal.initWithContext(this);
+        OneSignal.setAppId(ONESIGNAL_APP_ID);
 
         String agancyIdSp = SharedPrefData.getElementValue(promoterDataFileSp, agencyIDkeySp);
 
@@ -445,7 +449,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         OneSignal.sendTag("ID", agancyIdSp);
 
-        OneSignal.setSubscription(true);
         if(!isVacBalanceRequest )
         {
             isVacBalanceRequest = true ;
@@ -1032,7 +1035,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     SharedPrefData.putElement(promoterDataFileSp, agencyIDkeySp, "");
                     SharedPrefData.putElement(promoterDataFileSp, DataConstant.promoterUrlPathKey, "");
                     gpsHelper.stopGpsRecever();
-                    OneSignal.setSubscription(false);
 
                     Intent n = new Intent(this,SignIn.class);
                     startActivity(n);

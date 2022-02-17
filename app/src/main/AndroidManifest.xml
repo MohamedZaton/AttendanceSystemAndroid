@@ -153,7 +153,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity android:name=".InfoApp.About" />
         <activity android:name=".InfoApp.HelpInfo" />
-
+        65
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="5fa7a52d99625c93a09f5b3601927b28f48b5f3f" />
