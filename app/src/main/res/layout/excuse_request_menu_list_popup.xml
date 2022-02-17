@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -13,7 +13,7 @@
     android:layout_height="wrap_content">
 
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
@@ -25,7 +25,7 @@
                     android:layout_height="wrap_content"
                         android:orientation="vertical"
                     >
-                        <android.support.design.widget.FloatingActionButton
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
                             android:id="@+id/close_list_excuse_floatAButton"
                             android:layout_width="48dp"
                             android:layout_height="0dp"
@@ -45,7 +45,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="8"
                             android:visibility="gone" />
-                        <android.support.v7.widget.RecyclerView
+                        <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/exuse_menu_list_recyclerView"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
@@ -74,7 +74,7 @@
 
 
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>
@@ -82,4 +82,4 @@
 
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -30,7 +30,7 @@
         </RelativeLayout>
 
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="8"
@@ -201,7 +201,7 @@
             </LinearLayout>
 
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
 
@@ -295,7 +295,7 @@
                 android:textColor="@color/success_Green"
                 android:textStyle="bold" />
 
-            <android.support.design.widget.FloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/add_item_pt_floatAButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -324,7 +324,7 @@
                 android:textStyle="bold"
                 android:visibility="gone" />
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/products_list_recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -426,7 +426,7 @@
                 android:textColor="@color/orange_700"
                 android:textStyle="bold" />
 
-            <android.support.design.widget.FloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/add_item_compt_floatAButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -455,7 +455,7 @@
                 android:textStyle="bold"
                 android:visibility="gone" />
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/compt_list_recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -567,4 +567,4 @@
 
         </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

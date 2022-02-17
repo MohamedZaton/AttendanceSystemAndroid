@@ -8,7 +8,7 @@
     app:backgroundTint="@color/colorWhite"
     >
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/close_still_floatAButton"
         android:layout_width="50dp"
         android:layout_height="50dp"

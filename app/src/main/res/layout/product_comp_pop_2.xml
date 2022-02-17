@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -52,7 +52,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/image_option_cardview"
 
                     android:layout_width="match_parent"
@@ -114,7 +114,7 @@
                             android:textColor="@color/colorWhite" />
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
             </RelativeLayout>
             <LinearLayout
                 android:id="@+id/all_cat_fam_prod_linyout"
@@ -138,7 +138,7 @@
                     android:layout_weight="1"
                     android:text=" Product Category :"
                     android:textStyle="bold" />
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     card_view:cardUseCompatPadding="true"
@@ -146,15 +146,15 @@
 
 
                     >
-                    <android.support.v7.widget.AppCompatSpinner
+                    <androidx.appcompat.widget.AppCompatSpinner
                         android:id="@+id/sku_categries_spinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
 
-                    </android.support.v7.widget.AppCompatSpinner>
+                    </androidx.appcompat.widget.AppCompatSpinner>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
 
@@ -176,7 +176,7 @@
                     android:layout_weight="1"
                     android:text="Product Family :"
                     android:textStyle="bold" />
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     card_view:cardUseCompatPadding="true"
@@ -184,15 +184,15 @@
 
 
                     >
-                    <android.support.v7.widget.AppCompatSpinner
+                    <androidx.appcompat.widget.AppCompatSpinner
                         android:id="@+id/sku_families_spinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
 
-                    </android.support.v7.widget.AppCompatSpinner>
+                    </androidx.appcompat.widget.AppCompatSpinner>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
 
@@ -217,7 +217,7 @@
                     android:layout_weight="1"
                     android:text="Product SKU :"
                     android:textStyle="bold" />
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     card_view:cardUseCompatPadding="true"
@@ -225,15 +225,15 @@
 
 
                     >
-                    <android.support.v7.widget.AppCompatSpinner
+                    <androidx.appcompat.widget.AppCompatSpinner
                         android:id="@+id/sku_name_code_spinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
 
-                    </android.support.v7.widget.AppCompatSpinner>
+                    </androidx.appcompat.widget.AppCompatSpinner>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
 
@@ -343,7 +343,7 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="10dp">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
 
                     android:id="@+id/cancel_prod_btn_cardview"
                     android:layout_width="0dp"
@@ -364,10 +364,10 @@
                         android:text="CANCEL"
                         android:textStyle="bold" />
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/add_prod_btn_cardview"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -390,7 +390,7 @@
                         android:text="ADD"
                         android:textColor="@color/colorWhite" />
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -399,4 +399,4 @@
         </LinearLayout>
         </ScrollView>
     </RelativeLayout>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
