@@ -135,7 +135,6 @@ public class SignIn extends AppCompatActivity  {
                 {
                     dialogAll.pwdEmpty();
                 }
-
                 else {
                     final  String  url = DataConstant.serverUrl+DataConstant.LoginAuthPostControl;
                        Log.i("sign_in_url : ",url);
@@ -387,6 +386,7 @@ public class SignIn extends AppCompatActivity  {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
     {
+
         switch(requestCode) {
             case ALL_PERMISSIONS_RESULT:
                 for (String perm : permissionsToRequest) {

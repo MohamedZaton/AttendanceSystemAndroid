@@ -47,10 +47,12 @@ public class Promoter implements LocationListener  {
     private String imageKey = DataConstant.imageJsonKey;
     private String latKey = DataConstant.latLocationJsonKey;
     private String lngKey = DataConstant.lngLocationJsonKey;
+    private String nameLocationKey = DataConstant.nameLocationJsonKey;
     private  String stillthereStateKey = DataConstant.stillThereStatus;
     private String stillRepeatingkeySp = DataConstant.stillRepeatingJsonKey;
     private String workingHourskeySp = DataConstant.workingHoursJsonKey;
     private String stillDurationkeySp = DataConstant.stillDurationJsonKey;
+    private  String   nameLocationValue="";
     private FusedLocationProviderClient fusedLocationClient;
     Location locationFromChanged;
     private  GpsTracker gpsTracker;
@@ -70,6 +72,8 @@ public class Promoter implements LocationListener  {
         SharedPrefData = new SharedPrefData(context);
         gpsTracker = new GpsTracker(this.context);
         realFireBase = new RealFireBase(context);
+         nameLocationValue = SharedPrefData.getElementValue(DataConstant.promoterDataNameSpFile,DataConstant.nameLocationJsonKey)  ;
+
     } public Promoter(Context context, String imageValue,String promoterId  ) {
         this.context = context;
         this.promoterId = promoterId;
@@ -79,6 +83,7 @@ public class Promoter implements LocationListener  {
         gpsTracker = new GpsTracker(this.context);
         this.imageValue =imageValue;
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(context);
+        nameLocationValue = SharedPrefData.getElementValue(DataConstant.promoterDataNameSpFile,DataConstant.nameLocationJsonKey)  ;
 
         realFireBase = new RealFireBase(context);
 
@@ -91,6 +96,8 @@ public class Promoter implements LocationListener  {
         SharedPrefData = new SharedPrefData(context);
         gpsTracker = new GpsTracker(this.context);
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(context);
+        nameLocationValue = SharedPrefData.getElementValue(DataConstant.promoterDataNameSpFile,DataConstant.nameLocationJsonKey)  ;
+
         realFireBase = new RealFireBase(context);
 
     }
@@ -172,6 +179,7 @@ public class Promoter implements LocationListener  {
 
         String agencyIdValue=SharedPrefData.getElementValue(namefile,userIdKeySp);
         String checkTypeValue=DataConstant.checkInType;
+
         String  checkInIdValue="";
 
         if(imageValue==null)
@@ -226,6 +234,7 @@ public class Promoter implements LocationListener  {
             jsonData.put(imageKey, imageValue);
             jsonData.put(latKey, latValue);
             jsonData.put(lngKey, lngValue);
+            jsonData.put(nameLocationKey, nameLocationValue);
 
             validationBody(agencyIdValue,imageValue,latValue,lngValue);
         }
@@ -303,12 +312,12 @@ public class Promoter implements LocationListener  {
                 jsonData.put(imageKey, imageValue);
                 jsonData.put(latKey, latValue);
                 jsonData.put(lngKey, lngValue);
+                jsonData.put(nameLocationKey, nameLocationValue);
                 validationBody(agencyIdValue,imageValue,latValue,lngValue);
 
 
             } else if (connectOnline == 2)  //offline
             {
-
                 jsonData.put(agencyIDKey, agencyIdValue);
                 jsonData.put(CheckTimeKey, timeValue);
                 jsonData.put(CheckDateKey, dateVale);
@@ -318,7 +327,6 @@ public class Promoter implements LocationListener  {
                 jsonData.put(latKey, latValue);
                 jsonData.put(lngKey, lngValue);
                 validationBody(agencyIdValue,imageValue,latValue,lngValue);
-
 
 
             }
@@ -379,6 +387,7 @@ public class Promoter implements LocationListener  {
                 jsonData.put(imageKey, imageValue);
                 jsonData.put(latKey, latValue);
                 jsonData.put(lngKey, lngValue);
+                jsonData.put(nameLocationKey, nameLocationValue);
                 validationBody(agencyIdValue,imageValue,latValue,lngValue);
 
             } else if (connectOnline == 2)  //offline
@@ -442,6 +451,7 @@ public class Promoter implements LocationListener  {
                 jsonData.put(imageKey, imageValue);
                 jsonData.put(latKey, latValue);
                 jsonData.put(lngKey, lngValue);
+                jsonData.put(nameLocationKey, nameLocationValue);
                 validationBody(agencyIdValue,imageValue,latValue,lngValue);
 
             } else if (connectOnline == 2)  //offline
@@ -508,6 +518,7 @@ public class Promoter implements LocationListener  {
                 jsonData.put(imageKey, imageValue);
                 jsonData.put(latKey, latValue);
                 jsonData.put(lngKey, lngValue);
+                jsonData.put(nameLocationKey, nameLocationValue);
 
             } else if (connectOnline == 2)  //offline
             {
@@ -575,6 +586,7 @@ public class Promoter implements LocationListener  {
                 jsonData.put(imageKey, "");  // missed  still there not need image
                 jsonData.put(latKey, latValue);
                 jsonData.put(lngKey, lngValue);
+                jsonData.put(nameLocationKey, nameLocationValue);
                 jsonData.put(stillthereStateKey, "Missed");
 
             } else if (connectOnline == 2)  //offline
@@ -611,6 +623,25 @@ public class Promoter implements LocationListener  {
         {
             Toast.makeText(context, " Not found your location , please move around building", Toast.LENGTH_SHORT).show();
         }
+
+    }
+    public Map<String,String> postMissionRequestBody(String exMessageValue, String exDateValue,String agencyIdValue )
+    {
+        timeHelper = new TimeHelper(context)  ;
+        SharedPrefData = new SharedPrefData(context);
+
+
+        String timeValue="",dateVale="";
+
+
+        Map<String,String> jsonData = new  HashMap<String,String>();
+
+        jsonData.put("Message",exMessageValue);
+        jsonData.put("Date",exDateValue);
+        jsonData.put(DataConstant.agencyIDJsonKeyUpcase,agencyIdValue);
+
+
+        return jsonData;
 
     }
     public Map<String,String> postExcuseRequestBody(String exMessageValue, String exDateValue,String agencyIdValue , String exIdValue)

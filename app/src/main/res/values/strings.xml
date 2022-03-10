@@ -134,4 +134,5 @@
     <string name="upload_imge">Upload Image</string>
     <string name="select_txt">Select</string>
     <string name="fake_message">We have detected that your using a fake location app.\n please stop the app and try again</string>
+    <string name="mission_request">Mission Request</string>
 </resources>

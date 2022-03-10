@@ -357,11 +357,11 @@ public class CheckInFragment extends Fragment {
                         if (SharedPrefData.isExistsKey(offlineFile, DataConstant.recordOfflineKeys) && mainAsynctask.isConnected()) {
                             Intent i = new Intent(getActivity(), OfflineUploadActivity.class);
                             startActivity(i);
-                        }else if(isLateFillForm && !bodyFormLate.equals("")){
+                        }/*else if(isLateFillForm && !bodyFormLate.equals("")){
                             Intent i  = new Intent(getActivity(), GoogleFormActivity.class);
                             i.putExtra(DataConstant.bodyFormLate,bodyFormLate);
                             startActivity(i);
-                        } else if (!SharedPrefData.isExistsKey(offlineFile, DataConstant.checkInOffline) || !SharedPrefData.isExistsKey(offlineFile, DataConstant.recordOfflineKeys)) {
+                        }*/ else if (!SharedPrefData.isExistsKey(offlineFile, DataConstant.checkInOffline) || !SharedPrefData.isExistsKey(offlineFile, DataConstant.recordOfflineKeys)) {
                             Intent i = new Intent(getActivity(), CameraApi.class);
                             i.putExtra(checkTypeEnter, "check in");
                             startActivity(i);
@@ -376,11 +376,11 @@ public class CheckInFragment extends Fragment {
                         if (SharedPrefData.isExistsKey(offlineFile, DataConstant.recordOfflineKeys) && mainAsynctask.isConnected()) {
                             Intent i = new Intent(getActivity(), OfflineUploadActivity.class);
                             startActivity(i);
-                        }else if(isLateFillForm && !bodyFormLate.equals("")){
+                        }/*else if(isLateFillForm && !bodyFormLate.equals("")){
                             Intent i  = new Intent(getActivity(), GoogleFormActivity.class);
                             i.putExtra(DataConstant.bodyFormLate,bodyFormLate);
                             startActivity(i);
-                        } else if(!SharedPrefData.isExistsKey(offlineFile, DataConstant.checkInOffline) || !SharedPrefData.isExistsKey(offlineFile, DataConstant.recordOfflineKeys)) {
+                        }*/ else if(!SharedPrefData.isExistsKey(offlineFile, DataConstant.checkInOffline) || !SharedPrefData.isExistsKey(offlineFile, DataConstant.recordOfflineKeys)) {
                             Intent i = new Intent(getActivity(), CameraApi.class);
                             i.putExtra(checkTypeEnter, "check in");
                             startActivity(i);
@@ -436,14 +436,14 @@ public class CheckInFragment extends Fragment {
                     i.putExtra(checkTypeEnter, "check out");
                     startActivity(i);
                 }
-                else if(!isReport)
+/*                else if(!isReport)
                 {
                     Toast.makeText(getActivity(), "Please complete sales report first ", Toast.LENGTH_SHORT).show();
 
                     Intent x = new Intent(getActivity(), GoogleFormActivity.class);
                     startActivity(x);
 
-                }   // report check offline
+                }*/   // report check offline
                 else {
                     Toast.makeText(getActivity(), "Now you can check out", Toast.LENGTH_SHORT).show();
 
@@ -554,10 +554,8 @@ public class CheckInFragment extends Fragment {
             public void onUpdated(SendBirdException e) {
                 if (e != null) {
                     // Error!
-
                     return;
                 }
-
             }
         });
     }

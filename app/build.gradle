@@ -6,7 +6,6 @@ buildscript {
         maven { url 'https://plugins.gradle.org/m2/' }
         google()
 
-
     }
     dependencies {
         classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.14.0'
@@ -53,7 +52,6 @@ android {
 }
 
 dependencies {
-
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
@@ -94,14 +92,11 @@ dependencies {
     implementation 'com.github.pgmacdesign:silicompressor:3.0.6'
     implementation 'id.zelory:compressor:2.1.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
-
-
     // custom form builder
     implementation 'me.riddhimanadib.form-master:form-master:1.1.0'
     // Add dependency sf
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:29.1.0')
-
     // Declare the dependencies for the Crashlytics and Analytics libraries
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-crashlytics'

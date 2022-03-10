@@ -405,6 +405,7 @@ public class AttendanceFragment extends Fragment {
         protected List<LogVacationsModel> doInBackground(Context... params) {
             mContext = params[0];
             urlGetReqs = DataConstant.serverUrl + DataConstant.getLogAction + sharedPrefData.getElementValue(DataConstant.promoterDataNameSpFile,DataConstant.agencyIDJsonKeyUpcase);
+
             return getReqsFromServer(urlGetReqs);
         }
         @Override

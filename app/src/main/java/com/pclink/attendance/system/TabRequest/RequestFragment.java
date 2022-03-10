@@ -43,19 +43,40 @@ LinearLayout linearLayoutReq;
         // Inflate the layout for this fragment
 
       View view= inflater.inflate(R.layout.fragment_request, container, false);
-        Button vacationButton =(Button)view.findViewById(R.id.vacation_requestm_button);
-        Button excuseButton =(Button)view.findViewById(R.id.excuse_requestm_button);
+        Button vacationButton =view.findViewById(R.id.vacation_request_button);
+        Button missionButton =view.findViewById(R.id.mission_request_button);
+        Button excuseButton =view.findViewById(R.id.excuse_request_button);
         linearLayoutReq=view.findViewById(R.id.request_continerLayout);
         dialogAll=new DialogAll(getActivity());
         mainAsynctask = new MainAsynctask(getActivity(),22);
+        missionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mainAsynctask.isConnected()) {
+                    linearLayoutReq.setVisibility(View.GONE);
+                    MissionRequestFragment secondFragment = new MissionRequestFragment();
+                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.request_continer_fragment, secondFragment);
+                    fragmentTransaction.commit();
+                    fragmentTransaction.disallowAddToBackStack();
+
+                } else {
+                    String mystring = getResources().getString(R.string.cik_conect_network);
+
+                    dialogAll.txtImageMsgRequest(R.drawable.ic_error_network, "Error Network",mystring, "try again ", RequestFragment.class);
+
+                }
+
+            }
+        });
         vacationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mainAsynctask.isConnected()) {
                     linearLayoutReq.setVisibility(View.GONE);
-                    VacationRequestFragment secondFragment = new VacationRequestFragment();
+                    VacationRequestFragment thirdFragment = new VacationRequestFragment();
                     FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.request_continer_fragment, secondFragment);
+                    fragmentTransaction.replace(R.id.request_continer_fragment, thirdFragment);
                     fragmentTransaction.commit();
                     fragmentTransaction.disallowAddToBackStack();
 

@@ -42,6 +42,10 @@ public class DataConstant
 
     public  final  static   String  vacGetControl ="LeavingTimeOff/",
             vacGetAction = "GetVacationListApp/";
+    //mission route
+
+    public  final  static   String  missionGetControl ="LeavingTimeOff/",
+            missionGetAction = "CreateMission/";
 
     public  final  static   String  vacPostControl ="LeavingTimeOff/",
             vacPostAction = "CreateVacationRequest";
@@ -78,6 +82,7 @@ public class DataConstant
         public   final static String imageJsonKey="Image";
     public   final static String latLocationJsonKey="Lat";
     public   final static String lngLocationJsonKey="Lng";
+    public   final static String nameLocationJsonKey="Location";
     public   final static String timeMilsGps="timeGps";
     public   final static String isUseMockFakeLoctkey="isUseMockFakeLoct";
 
@@ -89,6 +94,7 @@ public class DataConstant
     public static final String LogOutClk = "LogOutClK";
 
     public static String[] arrayListExcuse = {"id","name"};
+    public static String[] arrayListMission = {"id","name"};
 
         // Location flag
 

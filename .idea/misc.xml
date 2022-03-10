@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/drawable/work_logo.xml" value="0.1085" />
+        <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/activity_google_form.xml" value="0.1" />
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/fragment_excuse_request.xml" value="0.1" />
+        <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/fragment_mission.xml" value="0.22" />
+        <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/fragment_request.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

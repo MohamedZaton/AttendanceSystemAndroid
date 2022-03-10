@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorWhite">#ffffff</color>
-    <color name="colorPrimary">#000026</color>
+    <color name="colorPrimary">#283593</color>
     <color name="greenCercleBackground">#698491</color>
     <color name="progressCircleColor">#304FFE</color>
     <color name="colorPrimaryDark">#125688</color>
@@ -9,7 +9,7 @@
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>
     <color name="colorBlack">#000000</color>
-    <color name="colorAccent">#000026</color>
+    <color name="colorAccent">#283593</color>
     <color name="red_button">#d33a3d</color>
     <color name="whiteGray">#D0D0D0</color>
     <color name="button_select_list_reason">#5f6fc3</color>
@@ -35,7 +35,7 @@
     <color name="category_phrases">#16AFCA</color>
 
 
-    <color name="tab_background_selected">#000026 </color>
+    <color name="tab_background_selected">#283593 </color>
     <color name="tab_background_unselected">#e4dd06</color>
 
     <color name="color_arc">#c4c4c4</color>

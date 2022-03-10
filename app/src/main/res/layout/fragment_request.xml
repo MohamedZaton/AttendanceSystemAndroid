@@ -23,7 +23,7 @@
 
 
         <Button
-            android:id="@+id/vacation_requestm_button"
+            android:id="@+id/vacation_request_button"
             android:layout_marginTop="24dp"
             android:layout_width="217dp"
             android:layout_height="wrap_content"
@@ -35,7 +35,19 @@
             />
 
         <Button
-            android:id="@+id/excuse_requestm_button"
+            android:id="@+id/mission_request_button"
+            android:layout_marginTop="24dp"
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape_shadow_white"
+            android:textColor="@color/darkgray"
+            android:paddingVertical="30dp"
+            android:text="Missions"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/excuse_request_button"
             android:layout_marginTop="24dp"
             android:textColor="@color/darkgray"
             android:layout_width="214dp"

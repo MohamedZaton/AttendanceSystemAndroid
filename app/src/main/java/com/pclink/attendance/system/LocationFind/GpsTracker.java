@@ -8,6 +8,8 @@ import android.content.ContextWrapper;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -37,6 +39,7 @@ import com.google.gson.Gson;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Locale;
@@ -57,6 +60,8 @@ public class GpsTracker implements LocationListener {
     DialogAll dialogAll;
     gpsService mGpsService;
     Activity mActivity;
+    List<Address> addresses ;
+    String locationName="" ;
     private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10;
     private static final long MIN_TIME_BW_UPDATES = 1000 * 10 ;
     protected LocationManager locationManager;
@@ -186,10 +191,28 @@ public class GpsTracker implements LocationListener {
             Log.e("gps"," lat = " + latt+" ");
             Log.e("gps","lng  = "+ longg+" ");
             Log.e("gps","time = "+ timeForm+" ");
+            Geocoder geocoder = new Geocoder(context);
+            try {
+              addresses = geocoder.getFromLocation(latitude, longitude, 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
+                String address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
+                String city = addresses.get(0).getLocality();
+                String country = addresses.get(0).getCountryName();
+              /*  String state = addresses.get(0).getAdminArea();
+                String postalCode = addresses.get(0).getPostalCode();
+                String knownName = addresses.get(0).getFeatureName();*/
+                Log.e("gps","location_Name = "+ address+" "+city+" "+country);
+                locationName=address;
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
 
             sharedPrefData.putElementLong(DataConstant.promoterDataNameSpFile,DataConstant.latLocationJsonKey, latt);
 
             sharedPrefData.putElementLong(DataConstant.promoterDataNameSpFile,DataConstant.lngLocationJsonKey, longg);
+            sharedPrefData.putElement(DataConstant.promoterDataNameSpFile,DataConstant.nameLocationJsonKey, locationName);
             sharedPrefData.putElementLong(DataConstant.promoterDataNameSpFile,DataConstant.timeMilsGps, time);
 
         }else
