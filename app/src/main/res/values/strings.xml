@@ -135,4 +135,8 @@
     <string name="select_txt">Select</string>
     <string name="fake_message">We have detected that your using a fake location app.\n please stop the app and try again</string>
     <string name="mission_request">Mission Request</string>
+    <string name="select_request_type">Select Request Type</string>
+    <string name="vacations">Vacations</string>
+    <string name="missions">Missions</string>
+    <string name="excuses">Excuses</string>
 </resources>

@@ -136,6 +136,9 @@ public class DataConstant
 
 
     public   final static String promoterUrlPathKey="promoterUrlpath";
+    public   final static String kLanguage="Language";
+    public   final static String kArabic  = "ar";
+    public   final static String kEnglish = "en";
     public  final  static  String  chackInFlagSp = "checkInFlag";
     public  final  static  String  checkOutFlagSp = "checkOutFlag";
     public  final  static  String  breakInFlagSp = "breakInFlag";

@@ -8,6 +8,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -40,6 +42,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.text.Html;
 import android.util.Base64;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -158,8 +161,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private  boolean stillAppear = false ;
     private  boolean askNotifPermission = false ;
 
-
-    @Override
+        @Override
     protected void onStart() {
         super.onStart();
         Log.i("action_method","On_Start");
@@ -174,21 +176,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 askNotifPermission=true;
             }
         }
-
         if(!stillAppear ) {
             stillAppear = true ;
             processIntent(getIntent());
         }
-        if(!isVacBalanceRequest) {
+        if(!isVacBalanceRequest){
             isVacBalanceRequest = true ;
             balanceGetReq();
             vacMenuGetReq();
-
         }
         // offline text appear nav bar
                 invalidateOptionsMenu();
     }
-
 
     //new location
     private Location location;
@@ -208,11 +207,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private static final int ALL_PERMISSIONS_RESULT = 1011;
 
     //  tabs icons and text labels
+
     private int[] navIconsActive = DataConstant.navIconsActive;
     private int[] navLabels = DataConstant.navLabels;
     private int[] navIcons = DataConstant.navIcons;
 
-    // sp sharedpref data promoter
+    // sp shared_pref data promoter
 
     private String promoterDataFileSp = DataConstant.promoterDataNameSpFile,
             stillThereKeySp = DataConstant.stillThereRunKeysp, agencyIDkeySp = DataConstant.agencyIDJsonKeyUpcase,
@@ -249,8 +249,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onDestroy() {
         super.onDestroy();
 
-
-
         String stageCheckOut = SharedPrefData.getElementValue(DataConstant.promoterDataNameSpFile, DataConstant.checkToggleButtonSP);
         if (stageCheckOut.equals(DataConstant.checkOutType)) {
 
@@ -263,12 +261,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         }
 
-
         if (gpsAlertDg != null) {
             gpsAlertDg.dismiss();
             gpsAlertDg.cancel();
-
-
         }
 
         gpsHelper.stopGpsRecever();
@@ -331,7 +326,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("action_method","on_create");
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FirebaseCrashlytics crashlytics = FirebaseCrashlytics.getInstance();

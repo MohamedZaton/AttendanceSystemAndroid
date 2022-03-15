@@ -2,7 +2,6 @@
 <resources>
     <string name="app_name">EAT</string>
     <string name="password">"ادخل كلمة السر "</string>
-    <string name="password">"كلمة السر "</string>
     <string name="username">الاسم</string>
     <string name="SignIn">الدخول</string>
     <string name="hello_blank_fragment">صفحة فارغ</string>
@@ -12,12 +11,12 @@
     <string name="break_in">بداية استراحة</string>
     <string name="nav_attendance">الحضور</string>
     <string name="help">المساعدة</string>
-    <string name="about">عن</string>
+    <string name="about">عن التطبيق</string>
     <string name="log_out">تسجيل خروج</string>
     <string name="open">فتح</string>
     <string name="close">اغلاق</string>
-    <string name="check_out">تسجيل الحضور</string>
-    <string name="check_in">تسجيل الانصراف</string>
+    <string name="check_out">تسجيل الانصراف</string>
+    <string name="check_in">تسجيل الحضور</string>
     <string name="connect_message">لا توجد شبكة يرجى التحقق من اتصالك بالإنترنت وحاول مرة أخرى</string>
     <string name="connect_title">لا توجد شبكة</string>
     <string name="connect_btn_dialog">تمام</string>
@@ -83,8 +82,8 @@
     <string name="s_name">اسم :</string>
     <string name="super_title">معلومات المشرف</string>
     <string name="number_of_shopper">عدد المتسوقين</string>
-    <string name="no_network_msg">Check your network connection .</string>
-    <string name="server_down_msg">Error get Your Sales Form.</string>
+    <string name="no_network_msg">تحقق من اتصالك بالشبكة.</string>
+    <string name="server_down_msg">خطأ في الحصول على نموذج المبيعات الخاص بك.</string>
     <string name="open_channel_list_participant_count">%1$d المشاركين</string>
     <string name="create_open_channel">إنشاء قناة مفتوحة</string>
     <string name="participant_list">مشاركون</string>
@@ -118,9 +117,13 @@
     <string name="upload_imge">تحميل الصور</string>
     <string name="select_txt">اختر</string>
     <string name="fake_message">لقد اكتشفنا أنك تستخدم تطبيق موقع مزيفًا.   الرجاء إيقاف التطبيق وحاول مرة أخرى</string>
-    <string name="mission_request">"مهمة عمل "</string>
+    <string name="mission_request">مهمة عمل </string>
     <string name="url_server">https://api.myjson.com/bins/tbhh8</string>
     <string name="todo">TODO</string>
     <string name="app_name2">EAT</string>
-    <string name="about_name">About EAT</string>
+    <string name="about_name">تعرف عن EAT</string>
+    <string name="select_request_type">حدد نوع الطلب</string>
+    <string name="vacations">الاجازات</string>
+    <string name="missions">مهمات</string>
+    <string name="excuses">أعذار</string>
 </resources>

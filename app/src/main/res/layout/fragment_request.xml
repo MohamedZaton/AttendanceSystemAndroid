@@ -17,7 +17,7 @@
             android:layout_height="35dp"
             android:layout_marginTop="44dp"
             android:gravity="center"
-            android:text="Select Request Type"
+            android:text="@string/select_request_type"
             android:textColor="@color/colorAccent"
             android:textStyle="bold" />
 
@@ -30,7 +30,7 @@
             android:background="@drawable/button_shape_shadow_white"
             android:textColor="@color/darkgray"
             android:paddingVertical="30dp"
-            android:text="Vacations"
+            android:text="@string/vacations"
             android:textAllCaps="false"
             />
 
@@ -42,7 +42,7 @@
             android:background="@drawable/button_shape_shadow_white"
             android:textColor="@color/darkgray"
             android:paddingVertical="30dp"
-            android:text="Missions"
+            android:text="@string/missions"
             android:textAllCaps="false"
             />
 
@@ -54,7 +54,7 @@
             android:paddingVertical="30dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_shape_shadow_white"
-            android:text="Excuses"
+            android:text="@string/excuses"
             android:textAllCaps="false"
             />
     </LinearLayout>

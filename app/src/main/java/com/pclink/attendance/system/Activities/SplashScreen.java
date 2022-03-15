@@ -4,10 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -34,13 +38,14 @@ import com.pclink.attendance.system.ThreadTasks.MainAsynctask;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.util.Locale;
 
 
 public class SplashScreen extends AppCompatActivity {
 
 
 
-    private com.pclink.attendance.system.DataBase.SharedPrefData SharedPrefData;
+    private com.pclink.attendance.system.DataBase.SharedPrefData sharedPrefData;
     private static String url="";
     private MainAsynctask mainAsynctask;
     private ProgressBar splashLoadingBar;
@@ -58,7 +63,19 @@ private  String promoterDataFileSp=DataConstant.promoterDataNameSpFile,
                 promoterURLpathUserKeySp= DataConstant.promoterUrlPathKey;
 
 
-
+    public void setLocale(String lang) {
+        Locale myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf,dm);
+        /*
+        Intent refresh = new Intent(this, MainActivity.class);
+        finish();
+        startActivity(refresh);
+        */
+    }
 
 @Override
     protected void onResume() {
@@ -78,27 +95,42 @@ private  String promoterDataFileSp=DataConstant.promoterDataNameSpFile,
         RequestQueue queue = Volley.newRequestQueue(SplashScreen.this);
         dialogAll=new DialogAll(this);
         realFireBase = new RealFireBase(this);
-        SharedPrefData =new SharedPrefData(this);
+        sharedPrefData =new SharedPrefData(this);
         mainAsynctask=new MainAsynctask(this,0);
         splashLoadingBar= findViewById(R.id.splash_progressBar);
         versionTxt= findViewById(R.id.name_version_txt);
-        url= SharedPrefData.getElementValue(promoterDataFileSp,promoterURLpathUserKeySp);
+        url= sharedPrefData.getElementValue(promoterDataFileSp,promoterURLpathUserKeySp);
         networkRequestPr = new NetworkRequestPr(SplashScreen.this,"from_splash");
+        try
+        {
+            if(sharedPrefData.isExistsKey(promoterDataFileSp,DataConstant.kLanguage)){
+
+                setLocale(sharedPrefData.getElementValue(promoterDataFileSp,DataConstant.kLanguage));
+            }else{
+                sharedPrefData.putElement(promoterDataFileSp,DataConstant.kLanguage , DataConstant.kEnglish);
+                setLocale(DataConstant.kEnglish);
+
+            }
+        }
+        catch(Exception e){
+
+        }
         Log.i("url_log_in",url);
         try {
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
             String version = pInfo.versionName;
             versionTxt.setText(version);
             versionTxt.setVisibility(View.VISIBLE);
-            String OldVersion = SharedPrefData.getElementValue(DataConstant.promoterDataNameSpFile,DataConstant.versionOldKey);
+            String OldVersion = sharedPrefData.getElementValue(DataConstant.promoterDataNameSpFile,DataConstant.versionOldKey);
+
             if(!version.equals(OldVersion))
             {
                 Log.i("delete_version ",OldVersion);
 
                 deleteCache(this) ;
-                SharedPrefData.removeFileSp(DataConstant.promoterDataNameSpFile);
-                SharedPrefData.removeFileSp(DataConstant.offlineModeFile);
-                SharedPrefData.putElement(DataConstant.promoterDataNameSpFile,DataConstant.versionOldKey,version);
+                sharedPrefData.removeFileSp(DataConstant.promoterDataNameSpFile);
+                sharedPrefData.removeFileSp(DataConstant.offlineModeFile);
+                sharedPrefData.putElement(DataConstant.promoterDataNameSpFile,DataConstant.versionOldKey,version);
             }
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
@@ -148,7 +180,7 @@ private  String promoterDataFileSp=DataConstant.promoterDataNameSpFile,
                 @Override
                 public void onErrorResponse(VolleyError error) {
 
-                    if (SharedPrefData.getElementValue(promoterDataFileSp, DataConstant.agencyIDJsonKeyUpcase).equals("")) {
+                    if (sharedPrefData.getElementValue(promoterDataFileSp, DataConstant.agencyIDJsonKeyUpcase).equals("")) {
 
 
 
