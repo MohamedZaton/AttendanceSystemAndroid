@@ -63,7 +63,7 @@ private  String promoterDataFileSp=DataConstant.promoterDataNameSpFile,
                 promoterURLpathUserKeySp= DataConstant.promoterUrlPathKey;
 
 
-    public void setLocale(String lang) {
+    public void setLanguage(String lang) {
         Locale myLocale = new Locale(lang);
         Resources res = getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
@@ -105,10 +105,10 @@ private  String promoterDataFileSp=DataConstant.promoterDataNameSpFile,
         {
             if(sharedPrefData.isExistsKey(promoterDataFileSp,DataConstant.kLanguage)){
 
-                setLocale(sharedPrefData.getElementValue(promoterDataFileSp,DataConstant.kLanguage));
+                setLanguage(sharedPrefData.getElementValue(promoterDataFileSp,DataConstant.kLanguage));
             }else{
                 sharedPrefData.putElement(promoterDataFileSp,DataConstant.kLanguage , DataConstant.kEnglish);
-                setLocale(DataConstant.kEnglish);
+                setLanguage(DataConstant.kEnglish);
 
             }
         }

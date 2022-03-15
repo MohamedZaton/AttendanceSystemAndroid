@@ -24,7 +24,7 @@ tools:context="com.pclink.attendance.system.Activities.SignIn">
         android:layout_centerVertical="true"
         android:layout_gravity="center"
         android:gravity="center"
-        app:srcCompat="@mipmap/title"/>
+        app:srcCompat="@mipmap/title" />
 
 </RelativeLayout>
 

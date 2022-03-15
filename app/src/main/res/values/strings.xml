@@ -139,4 +139,7 @@
     <string name="vacations">Vacations</string>
     <string name="missions">Missions</string>
     <string name="excuses">Excuses</string>
+    <string name="language">Languages</string>
+    <string name="arabic_world">عربى</string>
+    <string name="english_world">English</string>
 </resources>

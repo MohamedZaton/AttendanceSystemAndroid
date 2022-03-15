@@ -126,4 +126,7 @@
     <string name="vacations">الاجازات</string>
     <string name="missions">مهمات</string>
     <string name="excuses">أعذار</string>
+    <string name="language">اللغات</string>
+    <string name="arabic_world">عربى</string>
+    <string name="english_world">English</string>
 </resources>

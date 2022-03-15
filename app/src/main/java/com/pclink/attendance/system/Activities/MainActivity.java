@@ -102,6 +102,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.gson.Gson;
 import com.onesignal.OneSignal;
+import com.pclink.attendance.system.languages.LanguagesActivity;
 import com.sendbird.android.SendBird;
 import com.skyfishjy.library.RippleBackground;
 
@@ -1017,6 +1018,19 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         switch (item.getItemId()) {
 
+            case  R.id.language_drawerbar:
+            {
+
+
+
+                    Intent n = new Intent(this, LanguagesActivity.class);
+                    startActivity(n);
+
+
+
+
+                break;
+            }
             case R.id.log_out_drawerbar:       // < -- logOut log out
             {
 

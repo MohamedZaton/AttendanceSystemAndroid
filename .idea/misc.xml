@@ -14,6 +14,12 @@
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/nav_tab.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/menu/drawermenu.xml" value="0.39029126213592236" />
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/activity_languages.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.33229166666666665" />
+        <entry key="app/src/main/res/layout/fragment_request.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/menu/drawermenu.xml" value="0.33229166666666665" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.33229166666666665" />
       </map>
     </option>
   </component>
