@@ -120,6 +120,7 @@ public class  ExcuseRequestFragment extends Fragment {
     {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_excuse_request, container, false);
+        view.setLayoutDirection(View.LAYOUT_DIRECTION_LOCALE);
         excuseLinearLayout = view.findViewById(R.id.excuse_linerLayout);
         reasonTypeButton = view.findViewById(R.id.reason_excuse_Button);
         formatDate = new SimpleDateFormat("MM/dd/yyyy", new Locale("en"));

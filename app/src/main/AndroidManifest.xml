@@ -27,7 +27,7 @@
         android:screenOrientation="portrait"
         android:showOnLockScreen="true"
         android:showWhenLocked="true"
-        android:supportsRtl="false"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         android:versionCode="1"

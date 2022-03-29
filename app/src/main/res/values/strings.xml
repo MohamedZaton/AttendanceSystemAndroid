@@ -49,6 +49,7 @@
 -->
     <string name="date_format">dd/mm/yyyy</string>
     <string name="write_reason">Write your reason</string>
+    <string name="write_mission_reason">Write your mission</string>
     <string name="error_date">Select your date , please</string>
     <string name="error_empty_reason">Write Your Reason , please</string>
     <string name="error_select_list_type">Select your type , please</string>
@@ -142,4 +143,8 @@
     <string name="language">Languages</string>
     <string name="arabic_world">عربى</string>
     <string name="english_world">English</string>
+    <string name="type">Type</string>
+    <string name="vacation_balance">Vacation Balance :</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
 </resources>

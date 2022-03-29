@@ -8,9 +8,11 @@
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
-        <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/fragment_excuse_request.xml" value="0.1" />
+        <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/fragment_attendance.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/fragment_excuse_request.xml" value="0.33" />
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/fragment_mission.xml" value="0.22" />
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/fragment_request.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/fragment_vication_request.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/layout/nav_tab.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/menu/drawermenu.xml" value="0.39029126213592236" />
         <entry key="..\:/AndroidProjectsNew/AttendanceSystem/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />

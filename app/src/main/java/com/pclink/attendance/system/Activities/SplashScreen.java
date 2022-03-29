@@ -111,6 +111,7 @@ private  String promoterDataFileSp=DataConstant.promoterDataNameSpFile,
                 setLanguage(DataConstant.kEnglish);
 
             }
+
         }
         catch(Exception e){
 
@@ -122,7 +123,6 @@ private  String promoterDataFileSp=DataConstant.promoterDataNameSpFile,
             versionTxt.setText(version);
             versionTxt.setVisibility(View.VISIBLE);
             String OldVersion = sharedPrefData.getElementValue(DataConstant.promoterDataNameSpFile,DataConstant.versionOldKey);
-
             if(!version.equals(OldVersion))
             {
                 Log.i("delete_version ",OldVersion);
@@ -139,8 +139,7 @@ private  String promoterDataFileSp=DataConstant.promoterDataNameSpFile,
             Intent i = new Intent(SplashScreen.this, SignIn.class);
             startActivity(i);
 
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             deleteCache(this) ;
 
             Intent i = new Intent(SplashScreen.this, SignIn.class);

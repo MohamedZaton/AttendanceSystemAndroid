@@ -28,7 +28,7 @@
     <string name="day_word">أيام</string>
     <string name="clear_btn">بوضوح</string>
     <string name="submit">إرسال</string>
-    <string name="excuse_request">إجازة عارض</string>
+    <string name="excuse_request">طلب إذن</string>
     <string name="take_picture">التقط صورة</string>
     <string name="nav_notifications">إشعارات</string>
     <string name="nav_log">سجل</string>
@@ -42,6 +42,8 @@
     <string name="default_list_selected">اختيار السبب</string>
     <string name="date_format">dd/mm/yyyy</string>
     <string name="write_reason">اكتب السبب</string>
+    <string name="write_mission_reason">اكتب مكان المهمه</string>
+
     <string name="error_date">حدد التاريخ الخاص بك من فضلك</string>
     <string name="error_empty_reason">اكتب السبب الخاص بك من فضلك</string>
     <string name="error_select_list_type">حدد نوعك من فضلك</string>
@@ -124,9 +126,13 @@
     <string name="about_name">تعرف عن EAT</string>
     <string name="select_request_type">حدد نوع الطلب</string>
     <string name="vacations">الاجازات</string>
-    <string name="missions">مهمات</string>
-    <string name="excuses">أعذار</string>
+    <string name="missions">المهمات</string>
+    <string name="excuses">الأعذار</string>
     <string name="language">اللغات</string>
-    <string name="arabic_world">عربى</string>
+    <string name="arabic_world">العربى</string>
     <string name="english_world">English</string>
+    <string name="type"> </string>
+    <string name="vacation_balance">رصيد الأجازات :</string>
+    <string name="from_date"> من التاريخ</string>
+    <string name="to_date"> الى التاريخ</string>
 </resources>

@@ -38,7 +38,7 @@
                 android:id="@+id/reasonExcuse_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Type"
+                android:text="@string/type"
                 android:layout_gravity="center"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold"

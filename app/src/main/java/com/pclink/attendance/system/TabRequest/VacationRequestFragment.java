@@ -137,8 +137,11 @@ public class VacationRequestFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_vication_request, container, false);
-        dateHelper= new DateHelper();
         sharedPrefData = new SharedPrefData(getContext());
+        if(sharedPrefData.getElementValue(DataConstant.promoterDataNameSpFile,DataConstant.kLanguage).contains(DataConstant.kArabic)){
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
+        dateHelper= new DateHelper();
         startVacationDayImg=view.findViewById(R.id.date_start_vacation_imageView);
         endVacationDayImg=view.findViewById(R.id.date_end_vacation_imageView);
         vacDayTxt = view.findViewById(R.id.vac_days_txt);

@@ -40,7 +40,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text=" Vacation Balance : "
+                    android:text="@string/vacation_balance"
                     android:layout_gravity="center"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
@@ -63,7 +63,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Type "
+                    android:text="@string/type"
                     android:layout_gravity="center"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
@@ -80,12 +80,7 @@
                     android:padding="15dp"
                     android:text="@string/default_list_selected"
                     android:textColor="@color/colorPrimaryDark" />
-
-
             </LinearLayout>
-
-
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -104,16 +99,15 @@
                     android:layout_alignParentTop="true"
                     android:layout_gravity="center"
                     android:textStyle="bold"
-                    android:text="From Data"
+                    android:text="@string/from_date"
                     android:textColor="@color/colorAccent"
                     />
-
                 <TextView
                     android:id="@+id/start_vacation_date_display_textView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:text="@string/date_format" />
@@ -126,30 +120,23 @@
                     app:cardElevation="6dp"
                     >
                     <ImageView
-
                         android:id="@+id/date_start_vacation_imageView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_date_event_black_64dp"
-
-
-                        />
+                     />
 
                 </androidx.cardview.widget.CardView>
 
-
             </LinearLayout>
-
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                android:orientation="horizontal"
-                >
-
+                android:orientation="horizontal">
                 <TextView
                     android:id="@+id/end_to_textView"
                     android:layout_width="0dp"
@@ -158,14 +145,15 @@
                     android:layout_gravity="center"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold"
-                    android:text="To Date" />
+                    android:text="@string/to_date" />
 
                 <TextView
                     android:id="@+id/to_end_vacation_date_display_textView"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_gravity="center"
                     android:text="@string/date_format" />
 
@@ -178,18 +166,13 @@
                     app:cardElevation="6dp"
                     >
                     <ImageView
-
                         android:id="@+id/date_end_vacation_imageView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_date_event_black_64dp"
-
-
                         />
-
                 </androidx.cardview.widget.CardView>
-
 
             </LinearLayout>
             <LinearLayout
@@ -199,7 +182,6 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
                 <TextView
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorPrimaryDark"
@@ -213,16 +195,9 @@
                     android:text=""
                     android:textColor="@color/darkgray"
                     />
-
-
             </LinearLayout>
 
-
-
-
         </LinearLayout>
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
